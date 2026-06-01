@@ -10,15 +10,18 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
+        html, body { height: 100%; }
         body {
             background-color: #F4F3EF;
             color: #111111;
             font-family: "IBM Plex Mono", monospace;
             line-height: 1.7;
-            padding: 80px 15% 100px 15%;
+            padding: 0;
         }
         .hero {
-            min-height: 75vh;
+            min-height: auto;
+            height: calc(100vh - 8vw * 2);
+            margin: 8vw;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -29,6 +32,7 @@
             padding: 40px;
             margin-bottom: 150px;
         }
+        .page-content { padding: 0 8vw 100px 8vw; }
         .hero h1 {
             font-family: 'DM Serif Display', serif;
             font-size: clamp(2rem, 4vw, 3.5rem);
@@ -100,9 +104,10 @@
         <h1>Isabella Williams</h1>
         <p>Portfolio</p>
         <div class="scroll-indicator">[ Scroll Down ]</div>
-        <a href="https://isabellawilliamsmedia.github.io/Isabella-Williams-Portfolio-Site/" target="_blank" rel="noopener noreferrer" class="browser-link">or open website in full screen browser tab</a>
+        <a href="https://isabellawilliamsmedia.com" target="_blank" rel="noopener noreferrer" class="browser-link">direct me back to interactive portfolio</a>
     </section>
  
+    <div class="page-content">
     <section class="section">
         <h2 class="section-title">About</h2>
         <div class="text-content">
@@ -185,7 +190,7 @@
                 <a href="https://www.linkedin.com/in/isabellawilliamsmedia/" target="_blank" rel="noopener noreferrer" class="contact-btn">LINKEDIN // PROFILE</a>
             </div>
         </div>
-    </section>
+    </section>    </div>
 </body>
 </html>
 

@@ -4,28 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isabella Williams | Portfolio</title>
-    <!-- Vintage & Retro Mac System Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=DM+Serif+Display:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <style>
-        * { 
-            box-sizing: border-box; 
-            margin: 0; 
-            padding: 0; 
-        }
-        html { 
-            scroll-behavior: smooth; 
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
         body {
-            background-color: #F4F3EF; /* Classic Retro Cream / Off-White */
-            color: #111111; /* Sharp Black Text */
-            font-family: "Courier Prime", monospace;
-            line-height: 1.5;
-            /* MASSIVE SHIELD FIX: Gigantic side padding to force content away from the monitor bezel */
-            padding: 60px 18% 100px 18%;
+            background-color: #F4F3EF;
+            color: #111111;
+            font-family: "IBM Plex Mono", monospace;
+            line-height: 1.7;
+            padding: 140px 18% 100px 18%;
         }
-        /* RETRO HERO SCREEN */
+        /* HERO SECTION */
         .hero {
             height: 70vh;
             display: flex;
@@ -33,7 +25,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            border: 3px double #111111; /* Double system frame */
+            border: 3px double #111111;
             background-color: #FBFBFA;
             padding: 40px;
             margin-bottom: 80px;
@@ -42,15 +34,15 @@
             font-family: 'DM Serif Display', serif;
             font-size: clamp(2rem, 4vw, 3.5rem);
             font-weight: 400;
-            letter-spacing: -1px;
+            letter-spacing: 2px; /* Increased for readability */
             line-height: 1.1;
             margin-bottom: 15px;
             text-transform: uppercase;
         }
         .hero p {
-            font-family: 'Space Mono', monospace;
+            font-family: 'IBM Plex Mono', monospace;
             font-size: 0.85rem;
-            letter-spacing: 4px;
+            letter-spacing: 6px; /* Increased for readability */
             text-transform: uppercase;
             color: #111111;
             border: 1px solid #111111;
@@ -58,18 +50,28 @@
             background-color: #F4F3EF;
         }
         .scroll-indicator {
-            margin-top: 50px;
+            margin-top: 40px;
             font-size: 0.75rem;
-            letter-spacing: 2px;
+            letter-spacing: 4px; /* Increased for readability */
             text-transform: uppercase;
             font-weight: bold;
         }
-        /* SECTION LAYOUTS */
-        .section {
-            /* Tightened maximum content width to create safer inner borders */
-            max-width: 650px; 
-            margin: 0 auto 100px auto;
+        .browser-link {
+            font-family: 'IBM Plex Mono', monospace;
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            letter-spacing: 2px; /* Increased for readability */
+            text-transform: uppercase;
+            color: #111111;
+            text-decoration: underline;
+            transition: color 0.2s ease;
         }
+        .browser-link:hover { color: #555555; }
+
+        /* SECTIONS */
+        .section { max-width: 650px; margin: 0 auto 100px auto; }
         .section-title {
             font-family: 'DM Serif Display', serif;
             font-size: 2rem;
@@ -79,15 +81,7 @@
             padding-bottom: 10px;
             text-transform: uppercase;
         }
-        /* TEXT SECTION CONTENT */
-        .text-content p {
-            margin-bottom: 20px;
-            font-size: 0.95rem;
-            text-align: justify;
-        }
-        .text-content p:last-child {
-            margin-bottom: 0;
-        }
+        .text-content p { margin-bottom: 20px; font-size: 0.95rem; text-align: justify; }
         .project-subtitle {
             font-family: 'DM Serif Display', serif;
             font-size: 1.5rem;
@@ -95,123 +89,50 @@
             margin-bottom: 15px;
             text-transform: uppercase;
         }
-        /* ARTICLES GRID (Single Column) */
-        .articles-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 35px;
-        }
-        .article-card {
-            border: 1px dashed #111111;
-            padding: 25px;
-            background-color: #FBFBFA;
-            transition: background-color 0.2s ease;
-        }
-        .article-card:hover {
-            background-color: #EAE9E4;
-        }
-        .article-meta {
-            font-family: 'Space Mono', monospace;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            color: #555555;
-            margin-bottom: 12px;
-        }
-        .article-title {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.4rem;
-            line-height: 1.2;
-            margin-bottom: 12px;
-        }
-        .article-excerpt {
-            font-size: 0.9rem;
-            color: #222222;
-            margin-bottom: 20px;
-        }
-        .read-link {
-            color: #111111;
-            text-decoration: underline;
-            font-size: 0.8rem;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-        /* DESIGN PORTFOLIO GRID */
-        .design-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 40px;
-            justify-items: center; 
-        }
-        .design-item {
-            width: 100%;
-            max-width: 550px; 
-            background-color: #EAE9E4;
-            border: 2px solid #111111;
-            padding: 15px;
-            display: flex;
-            box-sizing: border-box;
-        }
-        .design-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: contain;
-            background: #FFFFFF;
-            border: 1px solid #111111;
-        }
-        /* RETRO SYSTEM CONTACT FOOTER */
-        .contact-box {
-            border: 3px double #111111;
-            background-color: #FBFBFA;
-            padding: 35px;
-            text-align: center;
-        }
-        .contact-box h3 {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.6rem;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-        .contact-links {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 25px;
-        }
+
+        /* ARTICLES & DESIGN GRID */
+        .articles-grid { display: grid; grid-template-columns: 1fr; gap: 35px; }
+        .article-card { border: 1px dashed #111111; padding: 25px; background-color: #FBFBFA; transition: background-color 0.2s ease; }
+        .article-card:hover { background-color: #EAE9E4; }
+        .article-meta { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; text-transform: uppercase; color: #555555; margin-bottom: 12px; }
+        .article-title { font-family: 'DM Serif Display', serif; font-size: 1.4rem; line-height: 1.2; margin-bottom: 12px; }
+        .article-excerpt { font-size: 0.9rem; color: #222222; margin-bottom: 20px; }
+        .read-link { color: #111111; text-decoration: underline; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; }
+        .design-grid { display: grid; grid-template-columns: 1fr; gap: 40px; justify-items: center; }
+        .design-item { width: 100%; max-width: 550px; background-color: #EAE9E4; border: 2px solid #111111; padding: 15px; }
+        .design-item img { width: 100%; height: auto; display: block; border: 1px solid #111111; }
+
+        /* FOOTER */
+        .contact-box { border: 3px double #111111; background-color: #FBFBFA; padding: 35px; text-align: center; }
+        .contact-box h3 { font-family: 'DM Serif Display', serif; font-size: 1.6rem; margin-bottom: 15px; text-transform: uppercase; }
+        .contact-links { display: flex; flex-direction: column; gap: 15px; margin-top: 25px; align-items: center; }
         .contact-btn {
-            font-family: 'Space Mono', monospace;
-            display: inline-block;
-            align-self: center;
-            padding: 10px 20px;
+            font-family: 'IBM Plex Mono', monospace;
+            display: block;
+            padding: 12px 20px;
             border: 1px solid #111111;
             color: #111111;
             text-decoration: none;
             font-size: 0.85rem;
             background-color: #F4F3EF;
             width: 100%;
-            max-width: 250px; 
+            max-width: 440px;
+            transition: all 0.2s ease;
         }
-        .contact-btn:hover {
-            background-color: #111111;
-            color: #F4F3EF;
-        }
-        @media (max-width: 768px) {
-            body {
-                padding: 40px 10%;
-            }
-        }
+        .contact-btn:hover { background-color: #111111; color: #F4F3EF; }
+
+        @media (max-width: 768px) { body { padding: 60px 10%; } }
     </style>
 </head>
 <body>
 
-    <!-- MAIN SCREEN HERO -->
     <section class="hero">
         <h1>Isabella Williams</h1>
         <p>Portfolio</p>
         <div class="scroll-indicator">[ Scroll Down ]</div>
+        <a href="https://isabella-williams-portfolio.netlify.app" target="_blank" rel="noopener noreferrer" class="browser-link">or open website in full screen browser tab</a>
     </section>
 
-    <!-- ABOUT SECTION -->
     <section class="section">
         <h2 class="section-title">About</h2>
         <div class="text-content">
@@ -220,7 +141,6 @@
         </div>
     </section>
 
-    <!-- WHY WORK WITH ME SECTION -->
     <section class="section">
         <h2 class="section-title">Why work with me?</h2>
         <div class="text-content">
@@ -228,82 +148,57 @@
         </div>
     </section>
 
-    <!-- ARTICLE EXAMPLES SECTION -->
     <section class="section">
         <h2 class="section-title">Writing Examples</h2>
         <div class="articles-grid">
-            
-            <!-- Article 1 -->
             <div class="article-card">
                 <div class="article-meta">THE ARBITER // APRIL 2026</div>
                 <div class="article-title">Poked to pieces: Ivy Hunter’s rise in Boise’s tattoo scene</div>
                 <div class="article-excerpt">A deep-dive feature tracking local artist Ivy Hunter's creative path, style evolutions and distinct impact within the growing Boise underground tattoo community.</div>
                 <a href="https://www.arbiteronline.com/2026/04/28/poked-to-pieces-ivy-hunters-rise-in-boises-tattoo-scene/" target="_blank" rel="noopener noreferrer" class="read-link">Read Entry</a>
             </div>
-
-            <!-- Article 2 -->
             <div class="article-card">
                 <div class="article-meta">THE ARBITER // APRIL 2026</div>
                 <div class="article-title">Inside Boise State’s Spring 2026 BFA Exhibition</div>
                 <div class="article-excerpt">On-the-ground arts reporting and visual documentation reviewing the culminating showcase of Boise State's fine arts graduates and emerging local talent.</div>
                 <a href="https://www.arbiteronline.com/2026/04/14/inside-boise-states-spring-2026-bfa-exhibition/" target="_blank" rel="noopener noreferrer" class="read-link">Read Entry</a>
             </div>
-
-            <!-- Article 3 -->
             <div class="article-card">
                 <div class="article-meta">BOISE STATE ATHLETICS // NOVEMBER 2025</div>
                 <div class="article-title">Serving on Every Front</div>
                 <div class="article-excerpt">A compelling human-interest feature profile exploring the dual life of a standout Boise State student-athlete balancing university sports commitments with active military service.</div>
                 <a href="https://broncosports.com/news/2025/11/13/b-1-features-serving-on-every-front" target="_blank" rel="noopener noreferrer" class="read-link">Read Entry</a>
             </div>
-
-            <!-- Article 4 -->
             <div class="article-card">
                 <div class="article-meta">THE ARBITER // JULY 2025</div>
                 <div class="article-title">From manager to teammate: The unlikely rise of Brennan Ramirez</div>
                 <div class="article-excerpt">The definitive profile tracking Brennan Ramirez's relentless transition from support staff to a critical, rostered presence on the court.</div>
                 <a href="https://www.arbiteronline.com/2025/07/23/from-manager-to-teammate-the-unlikely-rise-of-brennan-ramirez/" target="_blank" rel="noopener noreferrer" class="read-link">Read Entry</a>
             </div>
-
-            <!-- Article 5 -->
             <div class="article-card">
                 <div class="article-meta">THE ARBITER // MARCH 2026</div>
                 <div class="article-title">Local arcade temporarily transforms into an artistic oasis</div>
                 <div class="article-excerpt">On-the-scene feature reporting from Realms Arcade's community collage night, highlighting an accessible, sliding-scale creative "third space" built for local connection.</div>
                 <a href="https://www.arbiteronline.com/2026/03/08/local-arcade-temporarily-transforms-into-an-artistic-oasis/" target="_blank" rel="noopener noreferrer" class="read-link">Read Entry</a>
             </div>
-
-            <!-- Article 6 -->
             <div class="article-card">
                 <div class="article-meta">BOISE STATE ATHLETICS // DECEMBER 2025</div>
                 <div class="article-title">From Dubai to Boise</div>
                 <div class="article-excerpt">A sweeping cross-cultural human angle feature highlighting the unique backgrounds, adjustments and international identities within Boise State sports programs.</div>
                 <a href="https://broncosports.com/news/2025/12/11/b-1-features-from-dubai-to-boise" target="_blank" rel="noopener noreferrer" class="read-link">Read Entry</a>
             </div>
-            
         </div>
     </section>
 
-    <!-- DESIGN PORTFOLIO SECTION -->
     <section class="section">
         <h2 class="section-title">Design Work</h2>
         <div class="design-grid">
-            <!-- PNG Image 1 -->
-            <div class="design-item">
-                <img src="https://raw.githubusercontent.com/isabellawilliamsmedia/portfoliodesignwork/main/FashionTalk.png" alt="Fashion Talk Malik Monk Poster Illustration by Isabella Williams">
-            </div>
-            <!-- PNG Image 2 -->
-            <div class="design-item">
-                <img src="https://raw.githubusercontent.com/isabellawilliamsmedia/portfoliodesignwork/main/LifesPlaybook.png" alt="Lifes Playbook Poster Illustration by Isabella Williams">
-            </div>
-            <!-- PNG Image 3 -->
-            <div class="design-item">
-                <img src="https://raw.githubusercontent.com/isabellawilliamsmedia/portfoliodesignwork/main/CourtChronicles.png" alt="Court Chronicles Poster Illustration by Isabella Williams">
-            </div>
+            <div class="design-item"><img src="https://raw.githubusercontent.com/isabellawilliamsmedia/portfoliodesignwork/main/FashionTalk.png" alt="Fashion Talk"></div>
+            <div class="design-item"><img src="https://raw.githubusercontent.com/isabellawilliamsmedia/portfoliodesignwork/main/LifesPlaybook.png" alt="Lifes Playbook"></div>
+            <div class="design-item"><img src="https://raw.githubusercontent.com/isabellawilliamsmedia/portfoliodesignwork/main/CourtChronicles.png" alt="Court Chronicles"></div>
         </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
     <section class="section">
         <h2 class="section-title">Projects</h2>
         <div class="text-content">
@@ -313,7 +208,6 @@
         </div>
     </section>
 
-    <!-- RETRO SYSTEM CONTACT FOOTER -->
     <section class="section">
         <div class="contact-box">
             <h3>CONTACT</h3>

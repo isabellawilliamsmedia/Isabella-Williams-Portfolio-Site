@@ -22,12 +22,12 @@
             color: #111111; /* Sharp Black Text */
             font-family: "Courier Prime", monospace;
             line-height: 1.5;
-            /* MASSIVE BORDER SHIELD: Drastically pushes everything inward to avoid cutoffs */
-            padding: 120px 160px;
+            /* MASSIVE SHIELD FIX: Gigantic side padding to force content away from the monitor bezel */
+            padding: 60px 18% 100px 18%;
         }
         /* RETRO HERO SCREEN */
         .hero {
-            height: 75vh;
+            height: 70vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -36,11 +36,11 @@
             border: 3px double #111111; /* Double system frame */
             background-color: #FBFBFA;
             padding: 40px;
-            margin-bottom: 100px;
+            margin-bottom: 80px;
         }
         .hero h1 {
             font-family: 'DM Serif Display', serif;
-            font-size: clamp(2.2rem, 5vw, 4rem);
+            font-size: clamp(2rem, 4vw, 3.5rem);
             font-weight: 400;
             letter-spacing: -1px;
             line-height: 1.1;
@@ -58,7 +58,7 @@
             background-color: #F4F3EF;
         }
         .scroll-indicator {
-            margin-top: 60px;
+            margin-top: 50px;
             font-size: 0.75rem;
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -66,14 +66,15 @@
         }
         /* SECTION LAYOUTS */
         .section {
-            max-width: 800px; /* Narrowed down for beautiful single-column readability */
-            margin: 0 auto 120px auto;
+            /* Tightened maximum content width to create safer inner borders */
+            max-width: 650px; 
+            margin: 0 auto 100px auto;
         }
         .section-title {
             font-family: 'DM Serif Display', serif;
-            font-size: 2.2rem;
+            font-size: 2rem;
             font-weight: 400;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             border-bottom: 2px solid #111111;
             padding-bottom: 10px;
             text-transform: uppercase;
@@ -81,7 +82,7 @@
         /* TEXT SECTION CONTENT */
         .text-content p {
             margin-bottom: 20px;
-            font-size: 1rem;
+            font-size: 0.95rem;
             text-align: justify;
         }
         .text-content p:last-child {
@@ -89,20 +90,20 @@
         }
         .project-subtitle {
             font-family: 'DM Serif Display', serif;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: 400;
             margin-bottom: 15px;
             text-transform: uppercase;
         }
-        /* ARTICLES GRID (Single Column: 1,1,1,1,1,1) */
+        /* ARTICLES GRID (Single Column) */
         .articles-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 40px;
+            gap: 35px;
         }
         .article-card {
             border: 1px dashed #111111;
-            padding: 30px;
+            padding: 25px;
             background-color: #FBFBFA;
             transition: background-color 0.2s ease;
         }
@@ -118,12 +119,12 @@
         }
         .article-title {
             font-family: 'DM Serif Display', serif;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             line-height: 1.2;
             margin-bottom: 12px;
         }
         .article-excerpt {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: #222222;
             margin-bottom: 20px;
         }
@@ -138,12 +139,12 @@
         .design-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 50px;
-            justify-items: center; /* Centers the containers perfectly */
+            gap: 40px;
+            justify-items: center; 
         }
         .design-item {
             width: 100%;
-            max-width: 650px; /* Limits giant expansion on wide screens */
+            max-width: 550px; 
             background-color: #EAE9E4;
             border: 2px solid #111111;
             padding: 15px;
@@ -162,12 +163,12 @@
         .contact-box {
             border: 3px double #111111;
             background-color: #FBFBFA;
-            padding: 40px;
+            padding: 35px;
             text-align: center;
         }
         .contact-box h3 {
             font-family: 'DM Serif Display', serif;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             margin-bottom: 15px;
             text-transform: uppercase;
         }
@@ -185,10 +186,10 @@
             border: 1px solid #111111;
             color: #111111;
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             background-color: #F4F3EF;
-            transition: all 0.2s ease;
-            min-width: 220px; /* Gives the buttons a uniform, clean interface appearance */
+            width: 100%;
+            max-width: 250px; 
         }
         .contact-btn:hover {
             background-color: #111111;
@@ -196,7 +197,7 @@
         }
         @media (max-width: 768px) {
             body {
-                padding: 40px 20px;
+                padding: 40px 10%;
             }
         }
     </style>
@@ -307,7 +308,7 @@
         <h2 class="section-title">Projects</h2>
         <div class="text-content">
             <h3 class="project-subtitle">3D Design Portfolio</h3>
-            <p><strong>You're currently viewing this project!</strong> Developed as a culminating senior capstone, this portfolio serves as a clean interface designed to showcase my media layout concepts and digital artwork directly on the open web.</p>
+            <p><strong>You're currently viewing this project!</strong> Developed as a culminating senior capstone, my portfolio serves as a clean interface designed to showcase my media layout concepts and digital artwork directly on the open web.</p>
             <p style="margin-top: 25px;"><a href="https://github.com/isabellawilliamsmedia" target="_blank" rel="noopener noreferrer" class="read-link">View GitHub Source →</a></p>
         </div>
     </section>

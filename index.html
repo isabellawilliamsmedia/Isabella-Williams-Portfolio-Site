@@ -19,7 +19,8 @@
         }
         /* HERO SECTION */
         .hero {
-            min-height: 80vh;
+            /* Using min-height and flex-centering for perfect vertical balance */
+            min-height: 85vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -29,13 +30,6 @@
             background-color: #FBFBFA;
             padding: 40px;
             margin-bottom: 80px;
-        }
-        /* Adjusted for 3D monitor frame view based on Screenshot 2026-06-01 at 1.12.10 AM.png */
-        @media (max-width: 1000px) {
-            .hero {
-                padding-top: 40px;
-                padding-bottom: 40px;
-            }
         }
         .hero h1 {
             font-family: 'DM Serif Display', serif;

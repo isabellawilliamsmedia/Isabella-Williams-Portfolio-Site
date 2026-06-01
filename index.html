@@ -19,8 +19,8 @@
         }
         /* HERO SECTION */
         .hero {
-            /* Using min-height and flex-centering for perfect vertical balance */
-            min-height: 85vh;
+            /* Adjusted to 70vh for a balanced height */
+            min-height: 70vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -30,6 +30,11 @@
             background-color: #FBFBFA;
             padding: 40px;
             margin-bottom: 80px;
+        }
+        @media (max-width: 1000px) {
+            .hero {
+                padding: 40px;
+            }
         }
         .hero h1 {
             font-family: 'DM Serif Display', serif;

@@ -17,10 +17,8 @@
             line-height: 1.7;
             padding: 80px 18% 100px 18%;
         }
-        /* HERO SECTION */
         .hero {
-            /* Adjusted to 75vh for a slightly shorter box */
-            min-height: 80vh;
+            min-height: 75vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -30,11 +28,6 @@
             background-color: #FBFBFA;
             padding: 40px;
             margin-bottom: 150px;
-        }
-        @media (max-width: 1000px) {
-            .hero {
-                padding: 40px;
-            }
         }
         .hero h1 {
             font-family: 'DM Serif Display', serif;
@@ -54,9 +47,14 @@
             border: 1px solid #111111;
             padding: 4px 12px;
             background-color: #F4F3EF;
+            margin-bottom: 40px;
+        }
+        .scroll-indicator, .browser-link {
+            display: block;
+            width: 100%;
+            text-align: center;
         }
         .scroll-indicator {
-            margin-top: 40px;
             font-size: 0.75rem;
             letter-spacing: 4px;
             text-transform: uppercase;
@@ -64,7 +62,6 @@
         }
         .browser-link {
             font-family: 'IBM Plex Mono', monospace;
-            display: inline-block;
             margin-top: 20px;
             font-size: 0.75rem;
             font-weight: bold;
@@ -75,28 +72,10 @@
             transition: color 0.2s ease;
         }
         .browser-link:hover { color: #555555; }
-
-        /* SECTIONS */
         .section { max-width: 650px; margin: 0 auto 100px auto; }
-        .section-title {
-            font-family: 'DM Serif Display', serif;
-            font-size: 2rem;
-            font-weight: 400;
-            margin-bottom: 40px;
-            border-bottom: 2px solid #111111;
-            padding-bottom: 10px;
-            text-transform: uppercase;
-        }
+        .section-title { font-family: 'DM Serif Display', serif; font-size: 2rem; font-weight: 400; margin-bottom: 40px; border-bottom: 2px solid #111111; padding-bottom: 10px; text-transform: uppercase; }
         .text-content p { margin-bottom: 20px; font-size: 0.95rem; text-align: justify; }
-        .project-subtitle {
-            font-family: 'DM Serif Display', serif;
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-
-        /* ARTICLES & DESIGN GRID */
+        .project-subtitle { font-family: 'DM Serif Display', serif; font-size: 1.5rem; font-weight: 400; margin-bottom: 15px; text-transform: uppercase; }
         .articles-grid { display: grid; grid-template-columns: 1fr; gap: 35px; }
         .article-card { border: 1px dashed #111111; padding: 25px; background-color: #FBFBFA; transition: background-color 0.2s ease; }
         .article-card:hover { background-color: #EAE9E4; }
@@ -107,63 +86,49 @@
         .design-grid { display: grid; grid-template-columns: 1fr; gap: 40px; justify-items: center; }
         .design-item { width: 100%; max-width: 550px; background-color: #EAE9E4; border: 2px solid #111111; padding: 15px; }
         .design-item img { width: 100%; height: auto; display: block; border: 1px solid #111111; }
-
-        /* FOOTER */
         .contact-box { border: 3px double #111111; background-color: #FBFBFA; padding: 35px; text-align: center; }
         .contact-box h3 { font-family: 'DM Serif Display', serif; font-size: 1.6rem; margin-bottom: 15px; text-transform: uppercase; }
         .contact-links { display: flex; flex-direction: column; gap: 15px; margin-top: 25px; align-items: center; }
-        .contact-btn {
-            font-family: 'IBM Plex Mono', monospace;
-            display: block;
-            padding: 12px 20px;
-            border: 1px solid #111111;
-            color: #111111;
-            text-decoration: none;
-            font-size: 0.85rem;
-            background-color: #F4F3EF;
-            width: 100%;
-            max-width: 440px;
-            transition: all 0.2s ease;
-        }
+        .contact-btn { font-family: 'IBM Plex Mono', monospace; display: block; padding: 12px 20px; border: 1px solid #111111; color: #111111; text-decoration: none; font-size: 0.85rem; background-color: #F4F3EF; width: 100%; max-width: 440px; transition: all 0.2s ease; }
         .contact-btn:hover { background-color: #111111; color: #F4F3EF; }
-
         @media (max-width: 768px) { body { padding: 60px 10%; } }
-    </style></head><body>
-
+    </style>
+</head>
+<body>
+ 
     <section class="hero">
         <h1>Isabella Williams</h1>
         <p>Portfolio</p>
         <div class="scroll-indicator">[ Scroll Down ]</div>
-        <a href="https://isabella-williams-portfolio.netlify.app" target="_blank" rel="noopener noreferrer" class="browser-link">or open website in full screen browser tab</a>
+        <a href="https://isabellawilliamsmedia.github.io/Isabella-Williams-Portfolio-Site/" target="_blank" rel="noopener noreferrer" class="browser-link">or open website in full screen browser tab</a>
     </section>
-
+ 
     <section class="section">
         <h2 class="section-title">About</h2>
         <div class="text-content">
-            <p>Isabella Williams is a Boise-based media creator who brings a strong creative streak to everything she does. She excels at taking complex information and turning it into clear, engaging content that focuses on the human side of the news and gets people talking. Whether she's out reporting a story or working behind the scenes, Isabella brings a sharp eye for detail and a fresh perspective to every project.</p>
-            <p>Outside of work, that creative energy just shifts forms, and you can usually find her playing songs on her guitar, mixing DJ sets or hitting Idaho's hiking trails.</p>
+            <p>Isabella Williams is a Boise-based media creator with a passion for storytelling and a strong creative instinct. She excels at transforming complex information into clear, engaging content that highlights the human side of the news and sparks meaningful conversations. Whether reporting in the field or working behind the scenes, Isabella brings a sharp eye for fresh perspective and commitment to producing impactful stories.</p>
         </div>
     </section>
-
+ 
     <section class="section">
         <h2 class="section-title">Why work with me?</h2>
         <div class="text-content">
             <p>I approach every project with a drive to get things right. I thrive in fast-paced environments, adapt quickly when things shift and am always looking for new ways to build my skills and grow.</p>
         </div>
     </section>
-
+ 
     <section class="section">
         <h2 class="section-title">Writing Examples</h2>
         <div class="articles-grid">
             <div class="article-card">
                 <div class="article-meta">THE ARBITER // APRIL 2026</div>
-                <div class="article-title">Poked to pieces: Ivy Hunter’s rise in Boise’s tattoo scene</div>
+                <div class="article-title">Poked to pieces: Ivy Hunter's rise in Boise's tattoo scene</div>
                 <div class="article-excerpt">A deep-dive feature tracking local artist Ivy Hunter's creative path, style evolutions and distinct impact within the growing Boise underground tattoo community.</div>
                 <a href="https://www.arbiteronline.com/2026/04/28/poked-to-pieces-ivy-hunters-rise-in-boises-tattoo-scene/" target="_blank" rel="noopener noreferrer" class="read-link">Read Entry</a>
             </div>
             <div class="article-card">
                 <div class="article-meta">THE ARBITER // APRIL 2026</div>
-                <div class="article-title">Inside Boise State’s Spring 2026 BFA Exhibition</div>
+                <div class="article-title">Inside Boise State's Spring 2026 BFA Exhibition</div>
                 <div class="article-excerpt">On-the-ground arts reporting and visual documentation reviewing the culminating showcase of Boise State's fine arts graduates and emerging local talent.</div>
                 <a href="https://www.arbiteronline.com/2026/04/14/inside-boise-states-spring-2026-bfa-exhibition/" target="_blank" rel="noopener noreferrer" class="read-link">Read Entry</a>
             </div>
@@ -193,7 +158,7 @@
             </div>
         </div>
     </section>
-
+ 
     <section class="section">
         <h2 class="section-title">Design Work</h2>
         <div class="design-grid">
@@ -202,7 +167,7 @@
             <div class="design-item"><img src="https://raw.githubusercontent.com/isabellawilliamsmedia/portfoliodesignwork/main/CourtChronicles.png" alt="Court Chronicles"></div>
         </div>
     </section>
-
+ 
     <section class="section">
         <h2 class="section-title">Projects</h2>
         <div class="text-content">
@@ -211,7 +176,7 @@
             <p style="margin-top: 25px;"><a href="https://github.com/isabellawilliamsmedia" target="_blank" rel="noopener noreferrer" class="read-link">View GitHub Source →</a></p>
         </div>
     </section>
-
+ 
     <section class="section">
         <div class="contact-box">
             <h3>CONTACT</h3>
@@ -220,5 +185,7 @@
                 <a href="https://www.linkedin.com/in/isabellawilliamsmedia/" target="_blank" rel="noopener noreferrer" class="contact-btn">LINKEDIN // PROFILE</a>
             </div>
         </div>
-    </section></body></html>
+    </section>
+</body>
+</html>
 

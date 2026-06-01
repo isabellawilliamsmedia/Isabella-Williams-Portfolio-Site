@@ -15,12 +15,12 @@
             color: #111111;
             font-family: "IBM Plex Mono", monospace;
             line-height: 1.7;
-            /* UPDATED: Increased top padding to 180px for better vertical centering */
-            padding: 180px 18% 100px 18%;
+            padding: 80px 18% 100px 18%;
         }
         /* HERO SECTION */
         .hero {
-            height: 70vh;
+            /* UPDATED: Takes up full viewport height to push 'About' down */
+            height: 100vh; 
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -30,6 +30,12 @@
             background-color: #FBFBFA;
             padding: 40px;
             margin-bottom: 80px;
+        }
+        /* Specific fix for the 3D model frame */
+        @media (max-width: 1000px) {
+            .hero {
+                margin-top: 100px;
+            }
         }
         .hero h1 {
             font-family: 'DM Serif Display', serif;
